@@ -23,9 +23,7 @@ Program dirancang berbasis konsol dengan menu utama berikut:
 0. Keluar
 
 ## Kebutuhan Sistem
-
 ### Kebutuhan Fungsional
-
 | Kode | Kebutuhan        | Deskripsi                                                                          |
 |------|------------------|------------------------------------------------------------------------------------|
 | F01  | Data Kamar       | Menyimpan dan menampilkan informasi kamar (nomor, tipe, harga sewa, status).       |
@@ -35,17 +33,14 @@ Program dirancang berbasis konsol dengan menu utama berikut:
 | F05  | Validasi         | Menolak penyewaan jika kamar tidak tersedia.                                       |
 
 ### Kebutuhan Nonfungsional
-
 - Dikembangkan menggunakan Python.
 - Menerapkan prinsip OOP.
 - Data divalidasi untuk menghindari nilai yang tidak sesuai.
 - Informasi dan pesan kesalahan mudah dipahami.
 - Kode dibagi ke dalam modul agar mudah dipelihara.
 
-## Desain Class
-
+## Desain Clas
 Semua atribut dirancang **private** (enkapsulasi) dan diakses lewat method agar data tervalidasi.
-
 | Class         | Tanggung Jawab                                         | Atribut                                          | Method                                                        |
 |---------------|--------------------------------------------------------|--------------------------------------------------|---------------------------------------------------------------|
 | `PemilikKost` | Pemilik/admin yang mengelola sistem kost               | `nama_pemilik`, `no_telpon`                      | `tambah_kamar()`, `tambah_penghuni()`, `lihat_laporan_penyewaan()` |
@@ -54,9 +49,7 @@ Semua atribut dirancang **private** (enkapsulasi) dan diakses lewat method agar 
 | `Penyewaan`   | Transaksi penyewaan kamar                              | `penghuni`, `kamar`, `tanggal_masuk`, `tanggal_keluar` | `proses_penyewaan()`, `proses_pengakhiran()`            |
 
 ## Alur Kerja Singkat
-
 Program dijalankan dari `main.py`, menampilkan menu, menjalankan fitur yang dipilih, lalu kembali ke menu sampai pengguna memilih `0`.
-
 - **Tambah kamar:** ditolak jika nomor kamar sudah ada atau harga sewa negatif. Kamar baru berstatus `tersedia`.
 - **Daftarkan penghuni:** data divalidasi, lalu penghuni dibuat dengan ID unik.
 - **Sewa kamar:** penghuni harus sudah terdaftar dan kamar harus tersedia. Jika berhasil, objek `Penyewaan` dibuat dan status kamar menjadi `terisi`. Kamar yang sudah terisi ditolak (F05).
@@ -64,7 +57,6 @@ Program dijalankan dari `main.py`, menampilkan menu, menjalankan fitur yang dipi
 - **Laporan penyewaan:** menampilkan riwayat (penghuni, kamar, tanggal masuk, tanggal keluar).
 
 ## Rencana Struktur File
-
 ```
 .
 ├── main.py          # Titik masuk program: menu konsol dan pemanggilan method
@@ -76,9 +68,7 @@ Program dijalankan dari `main.py`, menampilkan menu, menjalankan fitur yang dipi
 ```
 
 ## Tim
-
 **Kelompok 7** (Program Studi S1 Sistem Informasi, Universitas Jambi)
-
 | Nama                          | NIM        |
 |-------------------------------|------------|
 | Ahmad Alfaro Edro Ramadhan    | F1E125063  |
